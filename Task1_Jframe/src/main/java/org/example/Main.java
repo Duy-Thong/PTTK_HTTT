@@ -8,5 +8,7 @@ public class Main {
         LoginView view= new LoginView();
         LoginController controller = new LoginController(view);
         view.setVisible(true);
+
+
     }
 }
