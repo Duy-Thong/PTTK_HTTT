@@ -46,16 +46,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/users").authenticated()
-			.anyRequest().permitAll()
-			.and()
-			.formLogin()
-				.usernameParameter("email")
-				.defaultSuccessUrl("/users")
+				.antMatchers("/login", "/register", "/").permitAll()  // Allow access to these URLs
+				.antMatchers("/users").authenticated()  // Protect the users URL
+				.and()
+				.formLogin()
+				.loginPage("/login")  // Use custom login page
+				.usernameParameter("username")  // Match form field name
+				.defaultSuccessUrl("/users", true)  // Redirect after successful login
 				.permitAll()
-			.and()
-			.logout().logoutSuccessUrl("/").permitAll();
+				.and()
+				.logout()
+				.logoutSuccessUrl("/")
+				.permitAll();
 	}
-	
-	
+
+
+
 }

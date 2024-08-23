@@ -19,7 +19,10 @@ public class AppController {
 	public String viewHomePage() {
 		return "index";
 	}
-	
+	@GetMapping("/login")
+	public String showLoginPage() {
+		return "login";  // Thymeleaf template named login.html
+	}
 	@GetMapping("/register")
 	public String showRegistrationForm(Model model) {
 		model.addAttribute("user", new User());
