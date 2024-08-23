@@ -14,9 +14,11 @@
 	<name>SpringBootRegistrationLogin</name>
 	<description>Demo registration (sign up) and Login (Sign in)</description>
 
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+    </properties>
 
 	<dependencies>
 		<dependency>
