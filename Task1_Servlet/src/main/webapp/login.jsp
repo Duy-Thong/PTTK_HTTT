@@ -14,6 +14,8 @@
 
       if (user != null) {
         errorMessage = "Login success";
+        session.setAttribute("user", user);
+        response.sendRedirect("index.jsp");
       } else {
         errorMessage = "Invalid username or password";
       }

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Details</title>
+</head>
+<body>
+<h1>Shipping Details</h1>
+<p>Your order is being processed and will be shipped to:</p>
+<p th:text="${shippingAddress}"></p>
+<p>Status: <span th:text="${shippingStatus}"></span></p>
+<a href="/">Go to Homepage</a>
+</body>
+</html>

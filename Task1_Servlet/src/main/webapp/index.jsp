@@ -11,6 +11,7 @@
     if (user != null) {
 %>
 <h1>Welcome, <%= user.getUsername() %></h1>
+<a href="change_password.jsp">Change Password</a> <!-- Added link to change password page -->
 <a href="logout">Logout</a>
 <%
     } else {
